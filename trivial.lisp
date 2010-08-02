@@ -21,7 +21,7 @@
   (make-instance 'tree))
 
 (defun make-schema (spec)
-  (mapcar #'(lambda (column-spec) (apply #'make-column column-spec)) spec))
+  (make-instance 'tree :items (mapcar #'(lambda (column-spec) (apply #'make-column column-spec)) spec)))
     				   
 	       	       		   
 			       	    
